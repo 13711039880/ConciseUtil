@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ChangeFile {
     public static void intact(String file, String[] content) {
-        try (FileWriter fileWriter = new FileWriter(new File(file));
+        try (FileWriter fileWriter = new FileWriter(file.replace("*fsr*", File.separator));
              BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
             for (String line : content) {
                 bufferedWriter.write(line);

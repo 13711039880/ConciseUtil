@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class NewFile {
     public static void NewFile(String file) {
-        File NewFile = new File(String.valueOf(file));
+        File NewFile = new File(file.replace("*fsr*", File.separator));
 
         try {
             NewFile.createNewFile();

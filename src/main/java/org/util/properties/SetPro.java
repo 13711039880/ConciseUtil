@@ -10,7 +10,7 @@ public class SetPro {
         Properties properties = new Properties();
 
         try {
-            properties.load(new FileInputStream(File));
+            properties.load(new FileInputStream(File.replace("*fsr*", java.io.File.separator)));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -18,7 +18,7 @@ public class SetPro {
         properties.setProperty(Vel, St);
 
         try {
-            properties.store(new FileOutputStream(File), tag);
+            properties.store(new FileOutputStream(File.replace("*fsr*", java.io.File.separator)), tag);
         } catch (IOException e) {
             e.printStackTrace();
         }

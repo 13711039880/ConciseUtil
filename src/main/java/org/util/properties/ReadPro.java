@@ -1,5 +1,6 @@
 package org.util.properties;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
@@ -8,7 +9,7 @@ public class ReadPro {
         String Va = null;
 
         try {
-            FileInputStream in = new FileInputStream(Fe);
+            FileInputStream in = new FileInputStream(Fe.replace("*fsr*", File.separator));
             Properties properties = new Properties();
             properties.load(in);
             in.close();

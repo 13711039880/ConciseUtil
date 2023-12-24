@@ -7,12 +7,12 @@ import java.io.IOException;
 
 public class ReadFile {
     public static String[] intact(String file) {
-        File ReadFile = new File(file);
+        File ReadFile = new File(file.replace("*fsr*", File.separator));
         String line;
         int count = 0;
         String[] content = null;
 
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(file.replace("*fsr*", File.separator)))) {
             while ((line = br.readLine()) != null) {
                 content[count] = line;
                 count++;

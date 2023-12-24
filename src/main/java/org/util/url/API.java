@@ -8,11 +8,11 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
 public class API {
-    public static String get(String site) {
+    public static String get(String url) {
         String responseString = null;
 
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
-            HttpGet httpGet = new HttpGet(site);
+            HttpGet httpGet = new HttpGet(url);
             CloseableHttpResponse httpResponse = httpClient.execute(httpGet);
             HttpEntity httpEntity = httpResponse.getEntity();
 

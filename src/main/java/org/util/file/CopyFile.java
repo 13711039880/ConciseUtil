@@ -8,8 +8,8 @@ import java.io.InputStreamReader;
 public class CopyFile {
     public static void CopyFile(String sourceFilePath, String targetFilePath) {
         try {
-            File sourceFile = new File(sourceFilePath);
-            File targetFile = new File(targetFilePath);
+            File sourceFile = new File(sourceFilePath.replace("*fsr*", File.separator));
+            File targetFile = new File(targetFilePath.replace("*fsr*", File.separator));
             String command = "cmd /c copy " + sourceFile + " " + targetFile;
             Process process = Runtime.getRuntime().exec(command);
             new BufferedReader(new InputStreamReader(process.getInputStream()));
