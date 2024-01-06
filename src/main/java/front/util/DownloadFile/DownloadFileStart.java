@@ -6,6 +6,12 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * DownloadFile前置
+ * @author 8043
+ * @see org.util.url.DownloadFile
+ */
+
 public class DownloadFileStart extends Thread {
     public static String DURL;
     public static String DFP;

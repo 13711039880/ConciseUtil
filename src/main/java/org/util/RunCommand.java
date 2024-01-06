@@ -1,12 +1,24 @@
 package org.util;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 执行命令
+ * @author 8043
+ */
+
 public class RunCommand {
-    public static String[] ret(String command) {
-        String[] content = new String[0];
+    /**
+     * 有返回
+     * @param command 命令
+     * @return Thread
+     */
+    public static String[] ret(@NotNull String command) {
+        String[] content;
         String line;
         int LineI = 0;
         content = new String[0];
@@ -27,6 +39,10 @@ public class RunCommand {
         return content;
     }
 
+    /**
+     * 无返回
+     * @param command 命令
+     */
     public static void NoRet(String command) {
         try {
             Process process = Runtime.getRuntime().exec(command);

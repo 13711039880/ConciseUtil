@@ -7,7 +7,17 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
+/**
+ * 请求API
+ * @author 8043
+ */
+
 public class API {
+    /**
+     * 请求API
+     * @param url URL
+     * @return 值
+     */
     public static String get(String url) {
         String responseString = null;
 

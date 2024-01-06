@@ -2,6 +2,12 @@ package front.util.DownloadFile;
 
 import javax.swing.*;
 
+/**
+ * DownloadFile前置
+ * @author 8043
+ * @see org.util.url.DownloadFile
+ */
+
 public class DownloadProgressUI {
     public static JFrame frame;
     private JPanel jp;

@@ -9,6 +9,12 @@ import java.nio.file.Path;
 import static front.util.DownloadFile.DownloadFileStart.DFP;
 import static front.util.DownloadFile.DownloadFileStart.DURL;
 
+/**
+ * DownloadFile前置
+ * @author 8043
+ * @see org.util.url.DownloadFile
+ */
+
 public class DownloadProgress extends Thread {
     public void run() {
         long FileSize = 0;

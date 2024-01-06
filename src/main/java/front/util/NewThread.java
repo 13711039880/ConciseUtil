@@ -5,6 +5,12 @@ import java.lang.reflect.Method;
 
 import static org.util.NewThread.run;
 
+/**
+ * NewThread前置
+ * @author 8043
+ * @see org.util.NewThread
+ */
+
 public class NewThread extends Thread {
     @Override
     public void run() {
